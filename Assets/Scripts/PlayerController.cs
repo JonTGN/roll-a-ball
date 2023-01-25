@@ -38,7 +38,7 @@ public class PlayerController : MonoBehaviour
     void SetCountText()
     {
         countText.text = "Count: " + count.ToString();
-        if (count >= 8)
+        if (count >= 9)
             winTextObject.SetActive(true);
     }
 
