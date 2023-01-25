@@ -38,7 +38,7 @@ public class PlayerController : MonoBehaviour
     void SetCountText()
     {
         countText.text = "Count: " + count.ToString();
-        if (count >= 9)
+        if (count >= 10)
             winTextObject.SetActive(true);
     }
 
@@ -57,6 +57,17 @@ public class PlayerController : MonoBehaviour
             count += 1;
 
             SetCountText();
+        }
+
+        else if (other.gameObject.CompareTag("jumpscare"))
+        {
+            other.gameObject.SetActive(false);
+            count += 1;
+
+            SetCountText();
+
+
+            Debug.Log("jumpscare");
         }
     }
 }

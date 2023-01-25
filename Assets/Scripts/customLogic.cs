@@ -4,15 +4,11 @@ using UnityEngine;
 
 public class customLogic : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public GameObject pivot;
 
-    // Update is called once per frame
+
     void Update()
     {
-        
+        transform.RotateAround(pivot.transform.position, Vector3.up, 30 * Time.deltaTime);
     }
 }
