@@ -55,19 +55,9 @@ public class PlayerController : MonoBehaviour
         {
             other.gameObject.SetActive(false);
             count += 1;
-            transform.position = new Vector3(transform.position.x, transform.position.y+1, transform.position.z);
             SetCountText();
         }
 
-        else if (other.gameObject.CompareTag("jumpscare"))
-        {
-            other.gameObject.SetActive(false);
-            count += 1;
 
-            SetCountText();
-
-
-            Debug.Log("jumpscare");
-        }
     }
 }
